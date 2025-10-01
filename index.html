@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innoraze - Sports Intelligence & Live Data Analytics</title>
+    <meta name="description" content="Sports data, insights, and tools for winning teams. Live scores, analytics dashboards, and fan experiences powered by real-time data.">
+    <meta name="keywords" content="sports data, analytics, live scores, football statistics, sports intelligence">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://innoraze.com/">
+    <meta property="og:title" content="Innoraze - Sports Intelligence & Live Data Analytics">
+    <meta property="og:description" content="Sports data, insights, and tools for winning teams. Live scores, analytics dashboards, and fan experiences.">
+    <meta property="og:image" content="https://innoraze.com/assets/og.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://innoraze.com/">
+    <meta property="twitter:title" content="Innoraze - Sports Intelligence & Live Data Analytics">
+    <meta property="twitter:description" content="Sports data, insights, and tools for winning teams. Live scores, analytics dashboards, and fan experiences.">
+    <meta property="twitter:image" content="https://innoraze.com/assets/og.png">
+
+    <link rel="canonical" href="https://innoraze.com/">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'heading': ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+                        'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+                    },
+                    colors: {
+                        'brand-blue': '#2563EB',
+                        'brand-emerald': '#059669',
+                        'brand-slate': '#0F172A',
+                        'brand-gray': '#64748B',
+                    },
+                    letterSpacing: {
+                        'tight': '-0.025em',
+                        'tighter': '-0.05em',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <svg class="h-8 w-8 text-brand-blue" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Innoraze</span>
+                    </a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="text-brand-blue font-medium">Home</a>
+                        <a href="solutions.html" class="text-gray-700 hover:text-brand-blue transition-colors">Solutions</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-blue transition-colors">About</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-brand-blue transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-brand-blue focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                <a href="/" class="block px-3 py-2 text-brand-blue font-medium">Home</a>
+                <a href="solutions.html" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">Solutions</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-emerald-600/20"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <span class="inline-block px-4 py-2 bg-blue-500/20 border border-blue-400/30 rounded-full text-blue-200 text-sm font-medium mb-6">
+                    🚀 Now serving 500+ professional teams
+                </span>
+            </div>
+            <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-8 leading-tight tracking-tight">
+                Sports intelligence for <span class="bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">champions</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Real-time data, advanced analytics, and actionable insights that give professional teams the competitive edge they need to win.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="contact.html" class="group bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                    <span class="flex items-center">
+                        Get Started
+                        <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </a>
+                <a href="solutions.html" class="group bg-transparent border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 font-semibold py-4 px-8 rounded-xl transition-all duration-300 backdrop-blur-sm">
+                    View Platform
+                </a>
+            </div>
+            <div class="mt-16 text-slate-400 text-sm">
+                <p>Trusted by Premier League, La Liga, and Champions League teams</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Bar -->
+    <section class="py-16 bg-slate-50 border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-slate-600 text-sm font-medium uppercase tracking-wide mb-2">Trusted by</p>
+                <h2 class="font-heading text-2xl font-bold text-slate-900">Professional Sports Organizations</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center">
+                <div class="group bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 w-36 h-20 flex items-center justify-center">
+                    <span class="text-slate-700 font-semibold text-sm group-hover:text-blue-600 transition-colors">Premier League</span>
+                </div>
+                <div class="group bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 w-36 h-20 flex items-center justify-center">
+                    <span class="text-slate-700 font-semibold text-sm group-hover:text-blue-600 transition-colors">La Liga</span>
+                </div>
+                <div class="group bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 w-36 h-20 flex items-center justify-center">
+                    <span class="text-slate-700 font-semibold text-sm group-hover:text-blue-600 transition-colors">Serie A</span>
+                </div>
+                <div class="group bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 w-36 h-20 flex items-center justify-center">
+                    <span class="text-slate-700 font-semibold text-sm group-hover:text-blue-600 transition-colors">Bundesliga</span>
+                </div>
+                <div class="group bg-white rounded-xl p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all duration-300 w-36 h-20 flex items-center justify-center">
+                    <span class="text-slate-700 font-semibold text-sm group-hover:text-blue-600 transition-colors">UEFA</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Match Center Demo -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Live Match Center</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Real-time scores, statistics, and insights powered by our comprehensive data platform
+                </p>
+            </div>
+            
+            <div class="bg-gray-50 rounded-2xl p-8 shadow-lg">
+                <div id="scores-widget" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Scores will be loaded here by JavaScript -->
+                    <div class="text-center py-8">
+                        <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-blue mx-auto"></div>
+                        <p class="mt-2 text-gray-600">Loading live scores...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Preview -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">Complete Sports Intelligence Platform</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Everything you need to analyze, understand, and engage with sports data
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Live Scores & Fixtures -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-blue-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">Live Scores & Fixtures</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Real-time match data, live scores, and comprehensive fixture information across all major leagues worldwide.</p>
+                    <a href="solutions.html#live-scores" class="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 group-hover:translate-x-1 transition-all duration-300">
+                        Learn more 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Analytics & Visualizations -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-emerald-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">Analytics & Visualizations</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Advanced xG models, shot maps, passing networks, and interactive dashboards for deep tactical analysis.</p>
+                    <a href="solutions.html#analytics" class="inline-flex items-center text-emerald-600 font-semibold hover:text-emerald-700 group-hover:translate-x-1 transition-all duration-300">
+                        Learn more 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Scouting & Recruitment -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-purple-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">Scouting & Recruitment</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Player shortlists, similarity search, radar charts, and comprehensive scouting reports for data-driven recruitment.</p>
+                    <a href="solutions.html#scouting" class="inline-flex items-center text-purple-600 font-semibold hover:text-purple-700 group-hover:translate-x-1 transition-all duration-300">
+                        Learn more 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Media & Creator Kits -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-orange-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">Media & Creator Kits</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Embeddable widgets, social media graphics, and content creation tools for media partners and creators.</p>
+                    <a href="solutions.html#media" class="inline-flex items-center text-orange-600 font-semibold hover:text-orange-700 group-hover:translate-x-1 transition-all duration-300">
+                        Learn more 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- APIs & Webhooks -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-red-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">APIs & Webhooks</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">RESTful APIs, real-time webhooks, and comprehensive documentation for seamless developer integration.</p>
+                    <a href="solutions.html#apis" class="inline-flex items-center text-red-600 font-semibold hover:text-red-700 group-hover:translate-x-1 transition-all duration-300">
+                        Learn more 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- White-Label Solutions -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-slate-200 hover:border-indigo-200">
+                    <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-900 mb-4">White-Label Solutions</h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">Custom match centers, branded experiences, and fully integrated solutions for clubs and media partners.</p>
+                    <a href="solutions.html#white-label" class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-700 group-hover:translate-x-1 transition-all duration-300">
+                        Learn more 
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights Teaser -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest Insights</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Data-driven analysis and insights from the world of sports
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-brand-blue to-brand-emerald"></div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full">Analytics</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">The Evolution of Expected Goals</h3>
+                        <p class="text-gray-600 mb-4">How xG models are revolutionizing football analysis and player evaluation across all levels of the game.</p>
+                        <a href="solutions.html#analytics" class="text-brand-blue font-medium hover:text-blue-700">Read more →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-600"></div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full">Recruitment</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Data-Driven Scouting in 2024</h3>
+                        <p class="text-gray-600 mb-4">Modern recruitment strategies using advanced analytics to identify undervalued talent and hidden gems.</p>
+                        <a href="solutions.html#scouting" class="text-brand-blue font-medium hover:text-blue-700">Read more →</a>
+                    </div>
+                </article>
+
+                <article class="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="h-48 bg-gradient-to-br from-orange-500 to-red-500"></div>
+                    <div class="p-6">
+                        <div class="flex gap-2 mb-3">
+                            <span class="px-3 py-1 bg-orange-100 text-orange-800 text-sm rounded-full">Product</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Building Real-Time Sports Platforms</h3>
+                        <p class="text-gray-600 mb-4">Technical insights into creating scalable, real-time sports data platforms that handle millions of events.</p>
+                        <a href="solutions.html#apis" class="text-brand-blue font-medium hover:text-blue-700">Read more →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-gradient-to-r from-brand-blue to-brand-emerald">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to transform your sports data strategy?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Join leading sports organizations using Innoraze to gain competitive advantages through data intelligence.
+            </p>
+            <a href="contact.html" class="bg-white text-brand-blue hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors inline-block">
+                Get Started Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-brand-blue" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold">Innoraze</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Sports intelligence platform providing live data, analytics, and insights for winning teams and organizations.
+                    </p>
+                    <p class="text-gray-400">
+                        <a href="mailto:info@innoraze.com" class="hover:text-white transition-colors">info@innoraze.com</a>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="solutions.html#live-scores" class="text-gray-400 hover:text-white transition-colors">Live Scores</a></li>
+                        <li><a href="solutions.html#analytics" class="text-gray-400 hover:text-white transition-colors">Analytics</a></li>
+                        <li><a href="solutions.html#scouting" class="text-gray-400 hover:text-white transition-colors">Scouting</a></li>
+                        <li><a href="solutions.html#apis" class="text-gray-400 hover:text-white transition-colors">APIs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Innoraze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Innoraze - Sports Intelligence",
+  "short_name": "Innoraze",
+  "description": "Sports data, insights, and tools for winning teams",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["sports", "analytics", "business"],
+  "lang": "en",
+  "dir": "ltr"
+}

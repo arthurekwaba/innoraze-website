@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Innoraze Sports Intelligence</title>
+    <meta name="description" content="Get in touch with Innoraze. Contact our team for demos, partnerships, or support. We respond within 24 hours.">
+    <link rel="canonical" href="https://innoraze.com/contact.html">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#3B82F6',
+                        'brand-emerald': '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <svg class="h-8 w-8 text-brand-blue" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Innoraze</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="text-gray-700 hover:text-brand-blue transition-colors">Home</a>
+                        <a href="solutions.html" class="text-gray-700 hover:text-brand-blue transition-colors">Solutions</a>
+                        <a href="about.html" class="text-gray-700 hover:text-brand-blue transition-colors">About</a>
+                        <a href="contact.html" class="text-brand-blue font-medium">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-brand-blue focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                <a href="/" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">Home</a>
+                <a href="solutions.html" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">Solutions</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-brand-blue font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                Get in <span class="text-brand-emerald">Touch</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                Ready to transform your sports data strategy? Contact our team to discuss your requirements and see how Innoraze can help.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Send us a message</h2>
+                    <p class="text-lg text-gray-600 mb-8">
+                        We respond within 24 hours. Tell us about your project and we'll get back to you with a tailored solution.
+                    </p>
+                    
+                    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Company</label>
+                            <input type="text" id="company" name="company" 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent">
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                            <select id="subject" name="subject" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent">
+                                <option value="">Select a topic</option>
+                                <option value="demo">Request a Demo</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="pricing">Pricing Information</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="6" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
+                                      placeholder="Tell us about your project, requirements, or any questions you have..."></textarea>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn"
+                                class="w-full bg-brand-blue hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Send Message
+                        </button>
+                        
+                        <!-- Success/Error Messages -->
+                        <div id="form-messages" class="hidden"></div>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Email</h4>
+                                <p class="text-gray-600 mb-2">Primary contact</p>
+                                <a href="mailto:contact@innoraze.com" class="text-brand-blue hover:text-blue-700 transition-colors">
+                                    contact@innoraze.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-brand-emerald rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">General Inquiries</h4>
+                                <p class="text-gray-600 mb-2">For general questions</p>
+                                <a href="mailto:info@innoraze.com" class="text-brand-blue hover:text-blue-700 transition-colors">
+                                    info@innoraze.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Response Time</h4>
+                                <p class="text-gray-600">We respond within 24 hours</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-1">Location</h4>
+                                <p class="text-gray-600">Amsterdam, Netherlands</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 pt-8 border-t border-gray-200">
+                        <h4 class="font-semibold text-gray-900 mb-4">What to expect</h4>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-brand-emerald mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Personalized demo tailored to your needs</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-brand-emerald mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Custom pricing based on your requirements</span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-4 h-4 text-brand-emerald mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>Implementation support and training</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-gray-600">Quick answers to common questions about our platform</p>
+            </div>
+            
+            <div class="space-y-8">
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">How quickly can we get started?</h3>
+                    <p class="text-gray-600">Most implementations can be completed within 2-4 weeks, depending on your specific requirements. We provide comprehensive onboarding and training to ensure your team is ready to use the platform effectively.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">What data sources do you cover?</h3>
+                    <p class="text-gray-600">We provide comprehensive coverage of major football leagues worldwide, including Premier League, La Liga, Serie A, Bundesliga, Champions League, and many others. Our data includes live scores, detailed statistics, and advanced analytics.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Do you offer custom integrations?</h3>
+                    <p class="text-gray-600">Yes, we work closely with clients to develop custom integrations that fit their existing workflows and systems. Our flexible API architecture makes it easy to connect with your preferred tools and platforms.</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 shadow-sm">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">What support do you provide?</h3>
+                    <p class="text-gray-600">We offer 24/7 technical support, comprehensive documentation, and regular training sessions. Our team is always available to help you get the most out of the platform and answer any questions you may have.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-brand-blue to-brand-emerald">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to get started?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Join leading sports organizations using Innoraze to gain competitive advantages through data intelligence.
+            </p>
+            <a href="#contact-form" class="bg-white text-brand-blue hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors inline-block">
+                Send us a Message
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-brand-blue" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold">Innoraze</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Sports intelligence platform providing live data, analytics, and insights for winning teams and organizations.
+                    </p>
+                    <p class="text-gray-400">
+                        <a href="mailto:info@innoraze.com" class="hover:text-white transition-colors">info@innoraze.com</a>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="solutions.html#live-scores" class="text-gray-400 hover:text-white transition-colors">Live Scores</a></li>
+                        <li><a href="solutions.html#analytics" class="text-gray-400 hover:text-white transition-colors">Analytics</a></li>
+                        <li><a href="solutions.html#scouting" class="text-gray-400 hover:text-white transition-colors">Scouting</a></li>
+                        <li><a href="solutions.html#apis" class="text-gray-400 hover:text-white transition-colors">APIs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Innoraze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+    <script>
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-btn');
+            const messagesDiv = document.getElementById('form-messages');
+            
+            // Show loading state
+            submitBtn.textContent = 'Sending...';
+            submitBtn.disabled = true;
+            
+            // Submit form
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    messagesDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded';
+                    messagesDiv.innerHTML = 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.';
+                    messagesDiv.classList.remove('hidden');
+                    this.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                messagesDiv.className = 'bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded';
+                messagesDiv.innerHTML = 'Sorry, there was an error sending your message. Please try again or contact us directly at <a href="mailto:contact@innoraze.com" class="underline">contact@innoraze.com</a>.';
+                messagesDiv.classList.remove('hidden');
+            })
+            .finally(() => {
+                submitBtn.textContent = 'Send Message';
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+</body>
+</html>

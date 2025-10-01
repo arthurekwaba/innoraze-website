@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Innoraze Sports Intelligence</title>
+    <meta name="description" content="Learn about Innoraze's mission to revolutionize sports data analytics. Our team combines data science, design, and sports expertise to deliver winning solutions.">
+    <link rel="canonical" href="https://innoraze.com/about.html">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="manifest" href="manifest.webmanifest">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-blue': '#3B82F6',
+                        'brand-emerald': '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="/" class="flex items-center">
+                        <svg class="h-8 w-8 text-brand-blue" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold text-gray-900">Innoraze</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="/" class="text-gray-700 hover:text-brand-blue transition-colors">Home</a>
+                        <a href="solutions.html" class="text-gray-700 hover:text-brand-blue transition-colors">Solutions</a>
+                        <a href="about.html" class="text-brand-blue font-medium">About</a>
+                        <a href="contact.html" class="text-gray-700 hover:text-brand-blue transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button type="button" class="text-gray-700 hover:text-brand-blue focus:outline-none" id="mobile-menu-button">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                <a href="/" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">Home</a>
+                <a href="solutions.html" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">Solutions</a>
+                <a href="about.html" class="block px-3 py-2 text-brand-blue font-medium">About</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-brand-blue">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 pb-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                About <span class="text-brand-emerald">Innoraze</span>
+            </h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                We're revolutionizing sports data analytics by combining cutting-edge technology with deep sports expertise
+            </p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+                    <p class="text-lg text-gray-600 mb-6">
+                        At Innoraze, we believe that data-driven insights are the key to success in modern sports. 
+                        Our mission is to democratize access to advanced sports analytics, making professional-grade 
+                        data intelligence available to teams, media, and organizations of all sizes.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8">
+                        We combine data science expertise, intuitive design, and deep sports knowledge to create 
+                        solutions that transform raw data into actionable insights. From live match analysis to 
+                        long-term strategic planning, we empower our clients to make better decisions.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="contact.html" class="bg-brand-blue hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Get in Touch
+                        </a>
+                        <a href="solutions.html" class="bg-transparent border-2 border-brand-blue text-brand-blue hover:bg-brand-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                            Our Solutions
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-xl font-semibold mb-6">Our Approach</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-brand-blue rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Data Science Excellence</h4>
+                                <p class="text-gray-600">Advanced machine learning models and statistical analysis for accurate insights.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-brand-emerald rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Intuitive Design</h4>
+                                <p class="text-gray-600">Beautiful, accessible interfaces that make complex data easy to understand.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">Sports Expertise</h4>
+                                <p class="text-gray-600">Deep understanding of the game from former professionals and analysts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metrics Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Platform Performance</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Built for reliability, speed, and scale to handle the demands of professional sports
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-brand-blue rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-2">99.9%</h3>
+                    <p class="text-lg text-gray-600 mb-2">Uptime</p>
+                    <p class="text-sm text-gray-500">Reliable service delivery</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-brand-emerald rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-2">&lt;120ms</h3>
+                    <p class="text-lg text-gray-600 mb-2">API Latency</p>
+                    <p class="text-sm text-gray-500">Lightning-fast responses</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-8 text-center shadow-lg">
+                    <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-2">24/7</h3>
+                    <p class="text-lg text-gray-600 mb-2">Support</p>
+                    <p class="text-sm text-gray-500">Always available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Team</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    A diverse team of data scientists, engineers, designers, and sports professionals working together to revolutionize sports analytics
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-32 h-32 bg-gradient-to-br from-brand-blue to-brand-emerald rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">JD</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">John Doe</h3>
+                    <p class="text-brand-blue font-medium mb-2">CEO & Founder</p>
+                    <p class="text-gray-600 text-sm">Former Premier League analyst with 15+ years in sports data science</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-32 h-32 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">SM</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Sarah Miller</h3>
+                    <p class="text-brand-blue font-medium mb-2">Head of Data Science</p>
+                    <p class="text-gray-600 text-sm">PhD in Statistics, former Google ML engineer specializing in sports analytics</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-32 h-32 bg-gradient-to-br from-orange-500 to-red-500 rounded-full mx-auto mb-6 flex items-center justify-center">
+                        <span class="text-2xl font-bold text-white">MJ</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Mike Johnson</h3>
+                    <p class="text-brand-blue font-medium mb-2">Lead Engineer</p>
+                    <p class="text-gray-600 text-sm">Full-stack developer with expertise in real-time systems and API design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Technology Stack</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    Built on modern, scalable technologies to ensure reliability and performance
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-blue-600 font-bold">TS</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">TypeScript</h3>
+                    <p class="text-sm text-gray-600">Type-safe development</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-green-600 font-bold">PG</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">PostgreSQL</h3>
+                    <p class="text-sm text-gray-600">Reliable data storage</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-purple-600 font-bold">CD</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Edge Computing</h3>
+                    <p class="text-sm text-gray-600">Global performance</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center shadow-lg">
+                    <div class="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                        <span class="text-orange-600 font-bold">ML</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Machine Learning</h3>
+                    <p class="text-sm text-gray-600">Advanced analytics</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Security -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Compliance & Security</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+                    We take data protection and security seriously, ensuring full compliance with international standards
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-brand-blue rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">GDPR Compliant</h3>
+                    <p class="text-gray-600">Full compliance with European data protection regulations</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-brand-emerald rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Enterprise Security</h3>
+                    <p class="text-gray-600">Bank-level encryption and security protocols</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">SLA Guarantee</h3>
+                    <p class="text-gray-600">99.9% uptime with comprehensive support coverage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-r from-brand-blue to-brand-emerald">
+        <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to work with us?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8">
+                Join the growing number of sports organizations using Innoraze to gain competitive advantages through data intelligence.
+            </p>
+            <a href="contact.html" class="bg-white text-brand-blue hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-colors inline-block">
+                Get Started Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-brand-blue" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold">Innoraze</span>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Sports intelligence platform providing live data, analytics, and insights for winning teams and organizations.
+                    </p>
+                    <p class="text-gray-400">
+                        <a href="mailto:info@innoraze.com" class="hover:text-white transition-colors">info@innoraze.com</a>
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white transition-colors">Privacy</a></li>
+                        <li><a href="terms.html" class="text-gray-400 hover:text-white transition-colors">Terms</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Solutions</h3>
+                    <ul class="space-y-2">
+                        <li><a href="solutions.html#live-scores" class="text-gray-400 hover:text-white transition-colors">Live Scores</a></li>
+                        <li><a href="solutions.html#analytics" class="text-gray-400 hover:text-white transition-colors">Analytics</a></li>
+                        <li><a href="solutions.html#scouting" class="text-gray-400 hover:text-white transition-colors">Scouting</a></li>
+                        <li><a href="solutions.html#apis" class="text-gray-400 hover:text-white transition-colors">APIs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Innoraze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/app.js"></script>
+</body>
+</html>
