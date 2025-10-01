@@ -141,6 +141,11 @@ function setupFormValidation() {
     const forms = document.querySelectorAll('form');
     
     forms.forEach(form => {
+        // Skip contact form completely - let it submit to Formspree without any validation
+        if (form.id === 'contact-form') {
+            return;
+        }
+        
         form.addEventListener('submit', function(e) {
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
@@ -235,8 +240,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Setup scroll animations
     setupScrollAnimations();
     
-    // Add loading states to buttons
-    const buttons = document.querySelectorAll('button[type="submit"]');
+    // Add loading states to buttons (skip contact form)
+    const buttons = document.querySelectorAll('button[type="submit"]:not(#contact-form button)');
     buttons.forEach(button => {
         button.addEventListener('click', function() {
             if (this.form && this.form.checkValidity()) {
