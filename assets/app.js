@@ -145,20 +145,37 @@ function setupFormValidation() {
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
             
+            // Clear previous error states
+            requiredFields.forEach(field => {
+                field.classList.remove('form-error', 'form-success');
+            });
+            
+            // Validate required fields
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     field.classList.add('form-error');
                     isValid = false;
                 } else {
-                    field.classList.remove('form-error');
                     field.classList.add('form-success');
                 }
             });
             
+            // Validate email format
+            const emailField = form.querySelector('input[type="email"]');
+            if (emailField && emailField.value) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailField.value)) {
+                    emailField.classList.remove('form-success');
+                    emailField.classList.add('form-error');
+                    isValid = false;
+                }
+            }
+            
             if (!isValid) {
                 e.preventDefault();
-                showNotification('Please fill in all required fields.', 'error');
+                showNotification('Please fill in all required fields correctly.', 'error');
             }
+            // If valid, let the form submit naturally (no preventDefault)
         });
     });
 }
