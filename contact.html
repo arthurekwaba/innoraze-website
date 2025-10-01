@@ -97,7 +97,7 @@
                         We respond within 24 hours. Tell us about your project and we'll get back to you with a tailored solution.
                     </p>
                     
-                    <form id="contact-form" action="https://formspree.io/f/xovkdgnv" method="POST" class="space-y-6">
+                    <form id="contact-form" action="https://formspree.io/f/xovkdgnv" method="POST" class="space-y-6" novalidate>
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name *</label>
                             <input type="text" id="name" name="name" required 
@@ -350,12 +350,15 @@
                 }
             })
             .then(response => {
+                console.log('Response status:', response.status);
+                console.log('Response ok:', response.ok);
                 if (response.ok) {
                     messagesDiv.className = 'bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded';
                     messagesDiv.innerHTML = 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.';
                     messagesDiv.classList.remove('hidden');
                     this.reset();
                 } else {
+                    console.error('Form submission failed with status:', response.status);
                     throw new Error('Form submission failed');
                 }
             })
